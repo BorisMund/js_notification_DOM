@@ -7,7 +7,7 @@ const pushNotification = (posTop, posRight, title, description, type) => {
 
   const h2 = document.createElement('h2');
   toSeeMesagge.append(h2);
-  h2.classList.add("title");
+  h2.classList.add('title');
   h2.textContent = title;
 
   const p = document.createElement('p');
