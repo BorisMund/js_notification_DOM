@@ -2,10 +2,6 @@
 /* eslint-disable */
 const pushNotification = (posTop, posRight, title, description, type) => {
   const toSeeMesagge = document.createElement('div');
-  toSeeMesagge.setAttribute(
-    'style',
-    `position: fixed; top: ${posTop}px; right: ${posRight}px;`,
-  );
   document.body.append(toSeeMesagge);
   toSeeMesagge.classList.add('notification');
 
@@ -18,6 +14,9 @@ const pushNotification = (posTop, posRight, title, description, type) => {
   toSeeMesagge.append(p);
   p.textContent = description;
   console.log(toSeeMesagge);
+
+  toSeeMesagge.style.top = posTop + 'px';
+  toSeeMesagge.style.right = posRight + 'px';
 
   if (type === 'success') {
     toSeeMesagge.classList.add('success');
