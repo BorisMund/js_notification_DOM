@@ -15,9 +15,10 @@ const pushNotification = (posTop, posRight, title, description, type) => {
   p.textContent = description;
   console.log(toSeeMesagge);
 
-  toSeeMesagge.style.position = 'fixed';
-  toSeeMesagge.style.top = posTop + 'px';
-  toSeeMesagge.style.right = posRight + 'px';
+toSeeMesagge.setAttribute(
+  'style',
+  `position: fixed; top: ${posTop}px; right: ${posRight}px;`
+);
 
   if (type === 'success') {
     toSeeMesagge.classList.add('success');
